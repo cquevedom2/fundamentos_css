@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="VetCare — Mini landing con formulario de contacto." />
+  <title>VetCare | Contacto</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <h1>🐾 VetCare</h1>
+    <p>Cuida a tu mascota con nosotros</p>
+  </header>
+
+  <!-- ── SECCIÓN 0: PRODUCTO ── -->
+  <section class="producto-section" aria-labelledby="producto-titulo">
+    <div class="producto-inner">
+
+      <div class="producto-texto">
+        <h2 id="producto-titulo">Plan Salud VetCare</h2>
+        <p>
+          Nuestro plan mensual cubre consultas ilimitadas, vacunas del calendario
+          básico y descuentos en laboratorio. Todo por una cuota fija sin sorpresas.
+        </p>
+        <p>
+          Ideal para dueños que quieren lo mejor para su mascota sin preocuparse
+          por costos inesperados. Disponible para perros y gatos de cualquier edad.
+        </p>
+        <a href="#contacto" class="btn">Quiero saber más</a>
+      </div>
+
+      <div class="producto-detalles">
+        <article class="detalle-card">
+          <span class="detalle-icono" aria-hidden="true">💉</span>
+          <h3>Vacunas incluidas</h3>
+          <p>Calendario completo anual sin costo adicional.</p>
+        </article>
+        <article class="detalle-card">
+          <span class="detalle-icono" aria-hidden="true">🩺</span>
+          <h3>Consultas libres</h3>
+          <p>Visitas ilimitadas con nuestros veterinarios.</p>
+        </article>
+      </div>
+
+    </div>
+  </section>
+
+  <main class="layout" id="contacto">
+
+    <!-- ── SECCIÓN 1: FORMULARIO ── -->
+    <section class="form-section" aria-labelledby="form-titulo">
+      <h2 id="form-titulo">Escríbenos</h2>
+      <p class="form-desc">Completa el formulario y te contactamos pronto.</p>
+
+      <form aria-label="Formulario de contacto" onsubmit="event.preventDefault(); alert('¡Mensaje enviado! 🐾');">
+
+        <div class="form-grupo">
+          <label for="nombre">Nombre</label>
+          <input
+            type="text"
+            id="nombre"
+            name="nombre"
+            placeholder="Tu nombre completo"
+            required
+            aria-required="true"
+            autocomplete="name"
+          />
+        </div>
+
+        <div class="form-grupo">
+          <label for="correo">Correo electrónico</label>
+          <input
+            type="email"
+            id="correo"
+            name="correo"
+            placeholder="tuemail@ejemplo.com"
+            required
+            aria-required="true"
+            autocomplete="email"
+          />
+        </div>
+
+        <button type="submit" class="btn">Enviar mensaje</button>
+
+      </form>
+    </section>
+
+
+    <!-- ── SECCIÓN 2: PANEL DE CUSTOM PROPERTIES ── -->
+    <aside class="props-section" aria-labelledby="props-titulo">
+      <h2 id="props-titulo">Custom Properties</h2>
+      <p class="props-desc">
+        Las variables CSS se definen en <code>:root</code> y se reutilizan
+        en todo el archivo. Cambiar un valor aquí actualiza el diseño entero.
+      </p>
+
+      <ul class="props-lista" role="list">
+        <li>
+          <span class="prop-muestra" style="background-color: #2d6a4f;" aria-hidden="true"></span>
+          <div>
+            <code>--color-primario</code>
+            <span class="prop-valor">#2d6a4f — verde principal</span>
+          </div>
+        </li>
+        <li>
+          <span class="prop-muestra" style="background-color: #f4a261;" aria-hidden="true"></span>
+          <div>
+            <code>--color-secundario</code>
+            <span class="prop-valor">#f4a261 — naranja acento</span>
+          </div>
+        </li>
+        <li>
+          <span class="prop-muestra prop-muestra--text" aria-hidden="true">1rem</span>
+          <div>
+            <code>--espaciado</code>
+            <span class="prop-valor">1rem — unidad base de espaciado</span>
+          </div>
+        </li>
+      </ul>
+
+      <div class="props-codigo">
+        <pre><code>:root {
+  --color-primario:   #2d6a4f;
+  --color-secundario: #f4a261;
+  --espaciado:        1rem;
+}</code></pre>
+      </div>
+    </aside>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 VetCare &mdash; Hecho con ❤️</p>
+  </footer>
+
+</body>
+</html>
